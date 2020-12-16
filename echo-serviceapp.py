@@ -29,4 +29,4 @@ def api_body(body):
     return body + " Backend_IP=" + local_ip
 
 
-app.run(host="0.0.0.0", port=5020)
+app.run(host="0.0.0.0")
