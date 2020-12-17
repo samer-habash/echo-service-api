@@ -2,19 +2,20 @@ Echo Service App Project:
 
 1. App Usage:
    
-        - The app is an api that returns the body request sent plus the server public IP, and write in to a logfile.
+        - The app is an api that returns the body request sent plus the server public IP, and write the body into a logfile.
             ~$ curl https://public-ip-of-the-deployed-server:5000/body-request-api
-        - You can use curl, postman, or also a web page in order to send the API request.
+        - You can use curl, postman, or even a webrowser in order to send the API request.
         - The app listens on port 5000 by default, it is dockerized/containerized and pushed to dockerhub.
             Image Name : samer1984/echo-service
         - To deploy the app on to a docker infra server, please run the following command :
             NOTE: The command exposes port 5000 (beware if this port is in user).
                   The /var/log directory is an example, please modify this as per your needs.
             ~$ docker run -d --name=echo-service -p 5000:5000 -v /var/log:/app/log samer1984/echo-service:latest
+            After the container is ip, open the webpage of the http://public-ip:5000/body-api-request, or use curl as illustrated above.
     
 2. Building the app:
    
-        - To build the app please refer to Dockerfile in order to build :
+        - To build the app please refer to Dockerfile in order to build and modfiy your changes as per your needs:
             ~$ docker build -t echo-service:latest .
 
 3. Deploy the app on aws, please refer to directory terraform-IaC
