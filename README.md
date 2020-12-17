@@ -14,8 +14,8 @@ Echo Service App Project:
     
 2. Building the app:
    
-            - To build the app please refer to Dockerfile in order to build :
-                ~$ docker build -t echo-service:latest .
+        - To build the app please refer to Dockerfile in order to build :
+            ~$ docker build -t echo-service:latest .
 
 3. Deploy the app on aws, please refer to directory terraform-IaC
     
