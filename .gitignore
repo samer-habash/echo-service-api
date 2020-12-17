@@ -10,3 +10,4 @@ venv/
 *.tfstate
 *.tfstate.*
 *.tfvars
+*.hcl
